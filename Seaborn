@@ -1,0 +1,62 @@
+from numpy import random
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+x=random.choice([3,4,5,6,8,9],p=[0.1,0.2,0.1,0.2,0.4,0],size=100)
+'''print(x)'''
+
+'''sns.displot([8 ,6, 8 ,8 ,5, 3, 8, 8, 3, 4, 3 ,8 ,4, 6 ,6 ,8, 6 ,8, 4, 8, 8, 8, 6, 6, 8, 4, 3, 6, 3, 4, 3, 8, 6, 8, 8, 8, 3,
+ 5, 8, 6, 4, 4, 4, 6, 8, 6, 6, 8, 4, 4, 6, 5, 5, 8, 3, 8, 8, 5, 8, 6, 8, 5, 8, 4, 4, 6, 8, 8, 4, 4 ,6, 8, 6, 3,
+ 4, 3, 6, 3, 8, 6, 6, 8, 3, 4, 6, 4, 4, 3, 4, 4, 3, 5, 4, 8, 6, 8, 6, 6, 3, 3])
+plt.show()'''
+
+#Gaussain
+'''GaussianDist=random.normal(0,2,size=1000)
+print(GaussianDist)
+sns.displot(GaussianDist,kind="hist")
+plt.show()
+pass'''
+
+
+#Binomial
+BinomialDist1=random.binomial(10,p=0.5,size=1000)
+BinomialDist2=random.binomial(10,0.1,1000)
+BinomialDist3=random.binomial(10,0.9,1000)
+data=[BinomialDist1,BinomialDist2,BinomialDist3]
+sns.displot(data,kind="kde",color="g",aspect=1)
+'''plt.show()'''
+
+#poisson
+'''poisson=random.poisson(2,1000)
+sns.displot(poisson,kind="hist",color="r")
+sns.displot(poisson,kind="kde",color="b")
+sns.displot(poisson,kind="ecdf",color="g")
+plt.show()'''
+
+#uniform
+uni=random.uniform(0,1,1000)
+print(uni)
+sns.displot(uni,kind="hist",color="b")
+sns.displot(uni,kind="kde",color="g")
+sns.displot(uni,kind="ecdf",color="r")
+
+
+plt.show()
+
+#logistic
+log=random.logistic(1,2,1000)
+sns.displot(log,kind="ecdf",color="r")
+plt.show()
+
+#exponential
+exp=random.exponential(2,1000)
+sns.displot(exp,kind="kde",color="g")
+sns.displot(exp,kind="ecdf",color="g")
+
+plt.show()
+
+#chi-Squared
+Chi=random.chisquare(2,1000)
+sns.displot(Chi,kind="kde",color="b")
+plt.show()
+
